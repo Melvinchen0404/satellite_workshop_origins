@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- ✅ REQUIRED FOR MOBILE TYPOGRAPHY -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>What Is Life? – Workshop</title>
 
 <style>
@@ -13,6 +17,12 @@
   --cyan: #3fffdc;
   --violet: #b983ff;
   --green: #6bff9a;
+}
+
+/* ---------- MOBILE SAFETY ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* ---------- BASE ---------- */
@@ -31,6 +41,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-size: 16px;
 }
 
 .container {
@@ -41,9 +52,9 @@ body {
 
 .email {
   font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
-  font-size: 0.95em;
+  font-size: 0.95rem;
   color: var(--green);
-margin-left: 0.2em;  
+  margin-left: 0.2em;
 }
 
 /* ---------- HEADINGS ---------- */
@@ -60,6 +71,7 @@ h1 {
 h2 {
   margin-top: 3rem;
   color: var(--cyan);
+  font-size: 1.6rem;
 }
 
 /* ---------- TEXT ---------- */
@@ -173,13 +185,30 @@ a:hover {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
   .flex-row {
     flex-direction: column;
     align-items: center;
   }
 
-  .text-block, .flex-row img {
-    max-width: 85%;
+  .text-block,
+  .flex-row img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p, li {
+    font-size: 1rem;
   }
 }
 </style>
@@ -192,11 +221,14 @@ a:hover {
   <!-- ---------- INTRO ---------- -->
   <div class="flex-row">
     <div class="text-block">
-
       <h1>What Is Life?</h1>
       <p class="meta">
-        A satellite workshop on the origins of life, biological intelligence, and bio-inspired AI, in association with the <a href="https://www.ntu.edu.sg/soh/news-events/conferences/apsa-2026" target="_blank" rel="noopener noreferrer">APSA26 conference</a>
+        A satellite workshop on the origins of life, biological intelligence, and bio-inspired AI, in association with the
+        <a href="https://www.ntu.edu.sg/soh/news-events/conferences/apsa-2026" target="_blank" rel="noopener noreferrer">
+          APSA26 conference
+        </a>
       </p>
+    </div>
 
     <img src="swarm.png"
          alt="Swarm illustration"
@@ -204,24 +236,23 @@ a:hover {
          style="width:70%">
   </div>
 
-      <div class="section">
-        <p>
-          This workshop explores foundational questions at the intersection of
-          biology, philosophy, and artificial intelligence:
-        </p>
+  <div class="section">
+    <p>
+      This workshop explores foundational questions at the intersection of
+      biology, philosophy, and artificial intelligence:
+    </p>
 
-        <ul>
-          <li>How did living cells emerge from non-living matter?</li>
-          <li>How did intelligence emerge from cell-based organisms?</li>
-          <li>Can biological intelligence inform better AI systems?</li>
-        </ul>
+    <ul>
+      <li>How did living cells emerge from non-living matter?</li>
+      <li>How did intelligence emerge from cell-based organisms?</li>
+      <li>Can biological intelligence inform better AI systems?</li>
+    </ul>
 
-        <p>
-          We seek contributions that deepen our understanding of how intelligence
-          emerges from biological systems.
-        </p>
-      </div>
-    </div>
+    <p>
+      We seek contributions that deepen our understanding of how intelligence
+      emerges from biological systems.
+    </p>
+  </div>
 
   <hr>
 
@@ -234,17 +265,17 @@ a:hover {
 
     <div class="text-block">
       <h2>Confirmed Speakers</h2>
-
       <ul>
         <li>
           <strong>Prof. Carlo Cannistraci</strong><br>
           Chair Professor, Tsinghua University<br>
           <em>Topic: TBC</em>
         </li>
-	<li>
-	   <strong>Prof. Chandra Verma</strong><br>
-	   Senior Principal Investigator, Bioinformatics Institute, A*STAR<br>
-	   <em>Topic: TBC</em>	
+        <li>
+          <strong>Prof. Chandra Verma</strong><br>
+          Senior Principal Investigator, Bioinformatics Institute, A*STAR<br>
+          <em>Topic: TBC</em>
+        </li>
         <li>
           <strong>Prof. Emeritus Alessandro Giuliani</strong><br>
           Former Research Director, Istituto Superiore di Sanità<br>
@@ -261,26 +292,24 @@ a:hover {
     <li>10:30 – 12:00 Speakers</li>
     <li>12:00 – 13:00 Lunch</li>
     <li>13:00 – 15:00 Breakout session</li>
-<br>
-<li>Date: 20 Jul 2026 (Mon)</li>
-<li><em>Venue: TBC (more updates will be provided soon)</em></li>
+    <li>Date: 20 Jul 2026 (Mon)</li>
+    <li><em>Venue: TBC (more updates will be provided soon)</em></li>
   </ul>
 
   <h2>Readings</h2>
-
   <p>
     Selected readings are available via the
-    <a href="https://entuedu-my.sharepoint.com/:f:/g/personal/melvinchen_staff_main_ntu_edu_sg/IgCP2btdJniTSKHUKVDVaoVqAebniSCTHcrGex5W49hXh3A?e=DMhfEC" target="_blank" rel="noopener noreferrer">OneDrive link</a>.
+    <a href="https://entuedu-my.sharepoint.com/:f:/g/personal/melvinchen_staff_main_ntu_edu_sg/IgCP2btdJniTSKHUKVDVaoVqAebniSCTHcrGex5W49hXh3A?e=DMhfEC"
+       target="_blank" rel="noopener noreferrer">
+      OneDrive link
+    </a>.
   </p>
 
   <h2>Contact</h2>
-
   <p>
-If you wish to contact the organizers, please e-mail Dr. Melvin Chen at <span class="email">
-    melvinchen (at) ntu (dot) edu (dot) sg
-  </span>
+    If you wish to contact the organizers, please e-mail Dr. Melvin Chen at
+    <span class="email">melvinchen (at) ntu (dot) edu (dot) sg</span>
   </p>
-
 
 </div>
 
