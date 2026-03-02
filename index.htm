@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- ✅ REQUIRED FOR MOBILE TYPOGRAPHY -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>What Is Life? – Workshop</title>
+
+<style>
+/* ---------- COLOUR PALETTE ---------- */
+:root {
+  --bg: #0b0f14;
+  --text: #e6e9ee;
+  --muted: #9aa4b2;
+  --cyan: #3fffdc;
+  --violet: #b983ff;
+  --green: #6bff9a;
+}
+
+/* ---------- MOBILE SAFETY ---------- */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* ---------- BASE ---------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #111827, var(--bg));
+  color: var(--text);
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background-image: url("ocean.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+.email {
+  font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: var(--green);
+  margin-left: 0.2em;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  color: var(--cyan);
+  font-size: 1.6rem;
+}
+
+/* ---------- TEXT ---------- */
+p, li {
+  font-size: 1.05rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--cyan), transparent);
+  margin: 3rem 0;
+}
+
+/* ---------- GLOWING A C T G ---------- */
+.glow {
+  animation: glowPulse 2.5s ease-in-out infinite alternate;
+  text-shadow:
+    0 0 6px var(--cyan),
+    0 0 12px var(--violet),
+    0 0 20px rgba(185, 131, 255, 0.6);
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 4px var(--cyan),
+      0 0 8px var(--violet);
+  }
+  to {
+    text-shadow:
+      0 0 10px var(--cyan),
+      0 0 18px var(--violet),
+      0 0 28px rgba(63, 255, 220, 0.8);
+  }
+}
+
+/* ---------- META ---------- */
+.meta {
+  color: var(--muted);
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+/* ---------- LINKS ---------- */
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- FLEX LAYOUT ---------- */
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.text-block {
+  flex: 1 1 60%;
+}
+
+.flex-row img {
+  flex: 0 0 35%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- IMAGE ORDER ---------- */
+.image-left {
+  order: -1;
+}
+
+.image-right {
+  order: 1;
+}
+
+/* ---------- IMAGE FRAME GLOW ---------- */
+.image-glow {
+  border-radius: 10px;
+  box-shadow:
+    0 0 8px rgba(63, 255, 220, 0.6),
+    0 0 16px rgba(185, 131, 255, 0.5),
+    0 0 32px rgba(63, 255, 220, 0.35);
+  animation: imageGlowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes imageGlowPulse {
+  from {
+    box-shadow:
+      0 0 6px rgba(63, 255, 220, 0.4),
+      0 0 12px rgba(185, 131, 255, 0.35);
+  }
+  to {
+    box-shadow:
+      0 0 14px rgba(63, 255, 220, 0.8),
+      0 0 26px rgba(185, 131, 255, 0.7),
+      0 0 42px rgba(63, 255, 220, 0.6);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-block,
+  .flex-row img {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p, li {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ---------- INTRO ---------- -->
+  <div class="flex-row">
+    <div class="text-block">
+      <h1>What Is Life?</h1>
+      <p class="meta">
+        A satellite workshop on the origins of life, biological intelligence, and bio-inspired AI, in association with the
+        <a href="https://www.ntu.edu.sg/soh/news-events/conferences/apsa-2026" target="_blank" rel="noopener noreferrer">
+          APSA26 conference
+        </a>
+      </p>
+    </div>
+
+    <img src="swarm.png"
+         alt="Swarm illustration"
+         class="image-right image-glow"
+         style="width:70%">
+  </div>
+
+  <div class="section">
+    <p>
+      This workshop explores foundational questions at the intersection of
+      biology, philosophy, and artificial intelligence:
+    </p>
+
+    <ul>
+      <li>How did living cells emerge from non-living matter?</li>
+      <li>How did intelligence emerge from cell-based organisms?</li>
+      <li>Can biological intelligence inform better AI systems?</li>
+    </ul>
+
+    <p>
+      We seek contributions that deepen our understanding of how intelligence
+      emerges from biological systems.
+    </p>
+  </div>
+
+  <hr>
+
+  <!-- ---------- SPEAKERS ---------- -->
+  <div class="flex-row">
+    <img src="octopus.png"
+         alt="Octopus illustration"
+         class="image-left image-glow"
+         style="width:70%">
+
+    <div class="text-block">
+      <h2>Confirmed Speakers</h2>
+      <ul>
+        <li>
+          <strong>Prof. Carlo Cannistraci</strong><br>
+          Chair Professor, Tsinghua University<br>
+          <em>Topic: TBC</em>
+        </li>
+        <li>
+          <strong>Prof. Chew Lock Yue</strong><br>
+          Professor, Division of Physics and Applied Physics, Nanyang Technological University<br>
+          <em>Topic: TBC</em>
+        </li>
+        <li>
+          <strong>Prof. Chandra Verma</strong><br>
+          Senior Principal Investigator, Bioinformatics Institute, A*STAR<br>
+          <em>Topic: TBC</em>
+        </li>
+        <li>
+          <strong>Prof. Emeritus Alessandro Giuliani</strong><br>
+          Former Research Director, Istituto Superiore di Sanità<br>
+          <em>Topic: TBC</em>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <h2>Schedule</h2>
+  <ul>
+    <li>09:30 – 10:00 Registration</li>	
+    <li>10:00 – 12:00 Speakers</li>
+    <li>12:00 – 13:00 Lunch</li>
+    <li>13:00 – 15:00 Breakout session</li>
+    <li>Date: 20 Jul 2026 (Mon)</li>
+    <li><em>Venue: TBC (more updates will be provided soon)</em></li>
+  </ul>
+
+  <h2>Readings</h2>
+  <p>
+    Selected readings are available via the
+    <a href="https://entuedu-my.sharepoint.com/:f:/g/personal/melvinchen_staff_main_ntu_edu_sg/IgCP2btdJniTSKHUKVDVaoVqAebniSCTHcrGex5W49hXh3A?e=DMhfEC"
+       target="_blank" rel="noopener noreferrer">
+      OneDrive link
+    </a>.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    If you wish to contact the organizers, please e-mail Dr. Melvin Chen at
+    <span class="email">melvinchen (at) ntu (dot) edu (dot) sg</span>
+  </p>
+
+</div>
+
+<script>
+/* ---------- AUTO-GLOW A C T G ---------- */
+(function () {
+  const regex = /[ACGTacgt]/g;
+
+  function walk(node) {
+    if (node.nodeType === Node.TEXT_NODE && regex.test(node.nodeValue)) {
+      const span = document.createElement("span");
+      span.innerHTML = node.nodeValue.replace(regex, c => `<span class="glow">${c}</span>`);
+      node.replaceWith(span);
+    } else if (
+      node.nodeType === Node.ELEMENT_NODE &&
+      !["SCRIPT", "STYLE"].includes(node.tagName)
+    ) {
+      node.childNodes.forEach(walk);
+    }
+  }
+
+  walk(document.body);
+})();
+</script>
+
+</body>
+</html>
